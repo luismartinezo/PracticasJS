@@ -21,21 +21,33 @@ function cambioColor(color) {
 	var caja = document.querySelector("#micaja");
 		
 // Podemos agregar algo dentro del html
-	//caja.innerHTML = "TEXTO DESDE JS";
+	caja.innerHTML = "TEXTO DESDE JS";
 // Agregar algun estilo
-	// caja.style.background = "blue";
-	// caja.style.padding = "20px";
-	// caja.style.color = "white";
+	 caja.style.background = "blue";
+	 caja.style.padding = "20px";
+	 caja.style.color = "white";
 // Añadimos clases
-	//caja.className = "Miclase";
+	caja.className = "Miclase";
 
 // Conseguir elementos por su etiqueta
 	var todosLosDivs = document.getElementsByTagName('div');
 
-	var contenidoEnTexto = todosLosDivs[2];
-	contenidoEnTexto.innerHTML = "OTRO TEXTO PARA EL ELEMENTO EN POSICION 2";
-	console.log(contenidoEnTexto);
-
+	//var contenidoEnTexto = todosLosDivs[2];
+	//contenidoEnTexto.innerHTML = "OTRO TEXTO PARA EL ELEMENTO EN POSICION 2";
+	//console.log(contenidoEnTexto);
+// todosLosDivs.forEach( valor, indece) => {
+	var seccion = document.querySelector("#miSeccion");
+	var hr = document.createElement("hr");
+	var valor;
+for(valor in todosLosDivs){
+	var parrafo = document.createElement("p");
+	var texto = document.createTextNode(todosLosDivs[valor].textContent);
+	parrafo.append(texto);
+	seccion.append(parrafo);
+	//document.querySelector("#miSeccion").prepend(parrafo);
+}
+seccion.append(hr);
+// }
 // Conseguir elementos por su clase
 	
-console.log(caja);
+console.log(todosLosDivs);
