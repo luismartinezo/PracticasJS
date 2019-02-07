@@ -48,6 +48,28 @@ for(valor in todosLosDivs){
 }
 seccion.append(hr);
 // }
-// Conseguir elementos por su clase
-	
-console.log(todosLosDivs);
+// console.log(todosLosDivs);
+
+// Conseguir elementos por su clase css
+var divsRojos = document.getElementsByClassName('rojo');
+var divsAmarillos = document.getElementsByClassName('amarillo');
+divsAmarillos[0].style.background = "yellow";
+
+var div;
+for(div in divsRojos){
+	// Si la clase es rojo entonces muetra el color
+	if (divsRojos[div].className=="rojo") {
+		divsRojos[div].style.background = "red";
+	}
+
+}
+// console.log(divsRojos);
+
+// Query Selector
+
+var id = document.querySelector("#encabezado");
+console.log(id);
+var claseRojo = document.querySelector(".rojo");
+console.log(claseRojo);
+var etiqueta = document.querySelectorAll("div");
+console.log(etiqueta);
