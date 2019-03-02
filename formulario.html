@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio DOM, Eventos y Funciones</title>
+	<script src="js/ejercicio-dom.js" type="text/javascript" ></script>
+	<style type="text/css">
+		.box{
+			width: 250px;
+			height: 250px;
+			float: left;
+			margin: 20px;
+		}
+		.dashed{
+			border: 3px dashed black;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+	1. Formulario campos: nombre, apellido, y edad
+	2. Boton de enviar el formulario: evento submit
+	3. Mostrar datos por pantalla
+	4. Validacion del formulario
+	 -->
+
+	<h1>Ejercicio DOM, Eventos y Funciones - JS luismartinezo.info</h1>
+		<div class="box">
+			<form action="" method="POST" id="formulario" onsubmit="return false">
+				<label for="nombre">Nombre</label>
+				<br>
+				<input type="text" name="nombre" id="nombre">
+				<br>
+				<span id="error_nombre"></span>
+				<br>
+				<br>
+				<label for="apellido">Apellido</label>
+				<br>
+				<input type="text" name="apellido" id="apellido">
+				<br>
+				<span id="error_apellido"></span>
+				<br>
+				<br>
+				<label for="edad">edad</label>
+				<br>
+				<input type="number" name="edad" id="edad">
+				<br>
+				<span id="error_edad"></span>
+				<br>
+				<br>
+				<input type="submit" name="" value="Enviar" id="submit">
+			</form>
+		</div>
+		<div class="box dashed">
+			<h3>Informacion de Usuario</h3>
+			<hr>
+			<p id="p_nombre">
+				Nombre: <span></span>
+			</p>
+				<p id="p_apellido">
+				Apellido: <span></span>
+			</p>
+				<p id="p_edad">
+				Edad: <span></span>
+			</p>
+		</div>
+</body>
+</html>

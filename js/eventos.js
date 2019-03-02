@@ -5,19 +5,22 @@
 // var boton = document.querySelector('#boton');
 
 // El evento load nos permite cargar el script al inicio de nuestro documento y no al final en el index
-window.addEventListener('load', function(){
-
-
+window.addEventListener('load', () => {
 
 	function cambiaColor() {
 		console.log("Me has dado click");
 
 		var bg = boton.style.background;
-		if (bg=="green") {
+
+		if(bg == "green"){
 			boton.style.background ="red";
 		}else{
 			boton.style.background ="green";
 		}
+
+		boton.style.padding = "10px";
+		boton.style.border = "1px solid #ccc";
+
 		return true;
 	}
 
@@ -27,15 +30,17 @@ window.addEventListener('load', function(){
 	//CLICK
 	boton.addEventListener('click', function() {
 		cambiaColor();
+		console.log(this);
+		this.style.border = "10px solid black";
 	});
 
 	// Mouse Over
-	boton.addEventListener('onmouseover', function() {
+	boton.addEventListener('mouseover', function() {
 		boton.style.background ="#ccc";
 	});
 
 	// Mouse out
-	boton.addEventListener('onmouseout', function() {
+	boton.addEventListener('mouseout', function() {
 		boton.style.background ="black";
 	});
 
